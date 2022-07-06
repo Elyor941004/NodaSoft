@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		background-color: #C0DBD9;
+	}
+	.header{
+		height: 94px;
+		background-color: #7FAFF6;
+		display: flex;
+		align-items: center;
+	}
+	.button{
+		background-color: rgb(0, 0, 0, 0.1);
+		border: 0;
+		font-size: 18px;
+		margin-left: 44px;
+		color: white;
+		padding: 14px;
+		border-radius: 4px;
+	}
+	.button:hover{
+		background-color: rgb(0, 0, 0, 0.4);
+	}
+	.row{
+		background-color: #B3F95A;
+		height: 444px;
+	}
+	.row_1{
+		height: 48%;
+		width: 100%;
+		display: flex;
+		margin: 10px 10px 10px 10px;
+	}
+	.column{
+		background-color: #8AD191;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 38px;
+		color: white;
+	}
+	.column_1{
+		width: 29%;
+	}
+	.column_2{
+		width: 49%;
+		margin-left: 18px;
+
+	}
+	.column_3{
+		width: 19%;
+		margin-left: 18px;
+	}
+	.row_2{
+		height: 49%;
+		width: 100%;
+		display: flex;
+		margin: 10px 10px 10px 10px;
+	}
+	.column_4{
+		width: 78%;
+	}
+	.row_3{
+		height: 244px;
+		width: 98%;
+		display: flex;
+		padding: 20px 20px 20px 20px;
+		background-color: rgb(0, 0, 0, 0.2);
+		margin-bottom: 94px;
+	}
+	.column_5{
+		width: 24%;
+		background-color: #0D89B0;
+		
+	}
+	.column_5_2, .column_5_3, .column_5_4{
+		margin-left: 20px;
+	}
+	.footer{
+		height: 100px;
+		background-color: #7FAFF6;
+	}
+	.content{
+		height: 244px;
+		display: flex;
+		justify-content: center;
+		background-color: transparent;
+		margin-top: 7px;
+	}
+	#content{
+		display: none;
+	}
+	.content_pop-up{
+		height: 244px;
+		font-size: 30px;
+		width: 278px;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.content .button_close{
+		width: 24px;
+		height: 24px;
+		background-color: #7FAFF6;
+		border: 0;
+	}
+</style>
+<body>
+	<header class="header">
+		<button class="button" onclick="showPop()">Open pop-up</button>
+	</header>
+	<div id="content">
+		<div class="content">
+			<div class="content_pop-up">
+				Pop-up
+			</div>
+			<button class="button_close" onclick="closePop()">
+				x
+			</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="row_1">
+			<div class="column column_1">1</div>
+			<div class="column column_2">2</div>
+			<div class="column column_3">3</div>
+		</div>
+		<div class="row_2">
+			<div class="column column_4">4</div>
+			<div class="column column_3">5</div>
+		</div>
+	</div>
+	<div class="row_3">
+		<div class="column_5 column_5_1"></div>
+		<div class="column_5 column_5_2"></div>
+		<div class="column_5 column_5_3"></div>
+		<div class="column_5 column_5_4"></div>
+	</div>
+	<footer class="footer">
+		
+	</footer>
+</body>
+</html>
+<script>
+	const popUp = document.getElementById('content')
+	function showPop(){
+		popUp.style.display='block'
+	}
+	function closePop(){
+		popUp.style.display='none'
+	}
+</script>
